@@ -7,4 +7,14 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="toucoumer.eze2chooz.secouer">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="EZ IT!"
+        android:id="@+id/textView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="85dp" />
 </RelativeLayout>
