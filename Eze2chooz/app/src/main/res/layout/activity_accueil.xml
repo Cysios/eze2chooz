@@ -10,7 +10,7 @@
     <TextView android:text="Eze2chooz" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAlignment="gravity"
-        android:textColor="#050202"
+        android:textColor="#eee8e8"
         android:textSize="@dimen/abc_text_size_display_3_material"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -36,5 +36,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="70dp"
-        android:background="#303e99" />
+        android:background="#303e99"
+        android:textColor="#f3eeee" />
 </RelativeLayout>
