@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class git Accueil extends AppCompatActivity {
+public class Accueil extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,9 +14,10 @@ public class git Accueil extends AppCompatActivity {
         setContentView(R.layout.activity_accueil);
 
         final Button ButtonGoToNext = (Button) findViewById(R.id.button_1to2);
-        ButtonGoToNext.setOnClickListener(new onClickListener() {
+        ButtonGoToNext.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, choix_des_voeux.class);
+                Intent intent = new Intent(Accueil.this, choix_des_voeux.class);
                 startActivity(intent);
             }
         });
