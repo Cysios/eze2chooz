@@ -24,7 +24,7 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentEnd="false"
         android:focusableInTouchMode="false"
-        android:backgroundTint="#8da507"
+        android:backgroundTint="@android:color/holo_orange_light"
         android:numStars="5"
         android:stepSize="1" />
 

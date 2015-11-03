@@ -10,18 +10,19 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/editText1"
         android:hint="@string/voeux1"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/imageButtonHome"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText2"
         android:hint="@string/voeux2"
-        android:layout_below="@+id/editText"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/editText1"
+        android:layout_alignStart="@+id/editText1"
+        android:layout_marginTop="20dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -29,7 +30,8 @@
         android:id="@+id/editText3"
         android:hint="@string/voeux3"
         android:layout_below="@+id/editText2"
-        android:layout_alignParentStart="true" />
+        android:layout_alignStart="@+id/editText1"
+        android:layout_marginTop="20dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -37,23 +39,35 @@
         android:id="@+id/editText4"
         android:hint="@string/voeux4"
         android:layout_below="@+id/editText3"
-        android:layout_alignParentStart="true" />
+        android:layout_alignStart="@+id/editText1"
+        android:layout_marginTop="20dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText5"
         android:hint="@string/voeux5"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/editText4"
-        android:layout_alignParentStart="true" />
-    <Button
+        android:layout_alignStart="@+id/editText1" />
+
+
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Suivant"
-        android:id="@+id/button_2to3"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="70dp"
-        android:background="#303e99" />
+        android:id="@+id/imageButtonHome"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/house204"
+        android:minHeight="64dp"
+        android:minWidth="64dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButtonNext"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/play45" />
 
 </RelativeLayout>
