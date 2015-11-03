@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Eze2chooz</string>
+    <string name="voeux1">voeux n°1</string>
+    <string name="voeux2">voeux n°2</string>
+    <string name="voeux3">voeux n°3</string>
+    <string name="voeux4">voeux n°4</string>
+    <string name="voeux5">voeux n°5</string>
 </resources>
