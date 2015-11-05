@@ -7,18 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class resultat_voeux extends AppCompatActivity {
+public class result extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_resultat_voeux);
+        setContentView(R.layout.activity_result);
 
         final ImageButton ButtonGoHome = (ImageButton) findViewById(R.id.imageButtonHome);
         ButtonGoHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(resultat_voeux.this, Accueil.class);
+                Intent intent = new Intent(result.this, home.class);
                 startActivity(intent);
             }
         });

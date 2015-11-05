@@ -8,18 +8,18 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name=".Accueil" >
+        <activity android:name=".home" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".choix_des_voeux" >
+        <activity android:name=".choices" >
         </activity>
-        <activity android:name=".secouer" >
+        <activity android:name=".shake" >
         </activity>
-        <activity android:name=".resultat_voeux" >
+        <activity android:name=".result" >
         </activity>
     </application>
 

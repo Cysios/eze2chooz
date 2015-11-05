@@ -4,21 +4,20 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
-public class secouer extends AppCompatActivity {
+public class choices extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_secouer);
+        setContentView(R.layout.activity_choices);
 
-        final ImageButton ButtonGoToNext = (ImageButton) findViewById(R.id.imageButtonNext);
-        ButtonGoToNext.setOnClickListener(new View.OnClickListener() {
+        final ImageButton ButtonGoNext = (ImageButton) findViewById(R.id.imageButtonNext);
+        ButtonGoNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(secouer.this, resultat_voeux.class);
+                Intent intent = new Intent(choices.this, shake.class);
                 startActivity(intent);
             }
         });
@@ -27,7 +26,7 @@ public class secouer extends AppCompatActivity {
         ButtonGoHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(secouer.this, Accueil.class);
+                Intent intent = new Intent(choices.this, home.class);
                 startActivity(intent);
             }
         });

@@ -5,18 +5,26 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="toucoumer.eze2chooz.secouer">
+    tools:context="toucoumer.eze2chooz.result">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="EZ IT!"
-        android:id="@+id/textView"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="YOU NEED :"
+        android:id="@+id/textView_Need"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:textSize="85dp" />
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Display result"
+        android:id="@+id/textView_Res"
+        android:layout_marginTop="74dp"
+        android:layout_below="@+id/textView_Need"
+        android:layout_centerHorizontal="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -31,9 +39,9 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButtonNext"
+        android:id="@+id/imageButtonGit"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/play45" />
+        android:background="@drawable/github" />
 
 </RelativeLayout>
