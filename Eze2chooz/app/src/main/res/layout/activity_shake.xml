@@ -10,9 +10,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/ezIt"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="EZ IT!"
-        android:id="@+id/textView"
+        android:text="@string/ez_it"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
@@ -35,5 +35,61 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:background="@drawable/play45" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textViewChoice1"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textViewDisplayChoice"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textViewChoice2"
+        android:layout_below="@+id/textViewChoice1"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textViewChoice3"
+        android:layout_below="@+id/textViewChoice2"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textViewChoice4"
+        android:layout_below="@+id/textViewChoice3"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textViewChoice5"
+        android:layout_below="@+id/textViewChoice4"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/DisplayShake"
+        android:id="@+id/textViewDisplayChoice"
+        android:layout_below="@+id/ezIt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textSize="20dp" />
 
 </RelativeLayout>

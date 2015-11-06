@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/editTextChoice1"
         android:hint="@string/choice1"
+        android:textSize="20sp"
         android:gravity="center"
         android:layout_below="@+id/imageButtonHome"
         android:layout_centerHorizontal="true"
@@ -22,6 +23,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/editTextChoice2"
         android:hint="@string/choice2"
+        android:textSize="20sp"
         android:gravity="center"
         android:layout_below="@+id/editTextChoice1"
         android:layout_marginTop="20dp" />
@@ -31,6 +33,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/editTextChoice3"
         android:hint="@string/choice3"
+        android:textSize="20sp"
         android:gravity="center"
         android:layout_below="@+id/editTextChoice2"
         android:layout_marginTop="20dp" />
@@ -40,6 +43,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/editTextChoice4"
         android:hint="@string/choice4"
+        android:textSize="20sp"
         android:gravity="center"
         android:layout_below="@+id/editTextChoice3"
         android:layout_marginTop="20dp" />
@@ -49,6 +53,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/editTextChoice5"
         android:hint="@string/choice5"
+        android:textSize="20sp"
         android:gravity="center"
         android:layout_below="@+id/editTextChoice4"
         android:layout_marginTop="20dp" />
