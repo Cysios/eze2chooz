@@ -7,26 +7,29 @@
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Accueil"
     android:background="@android:color/holo_blue_dark">
 
+    <TextView
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Help you find your way between choices"
+        android:id="@+id/textView2"
+        android:textSize="@dimen/abc_text_size_display_1_material"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_marginBottom="93dp"
+        android:layout_above="@+id/button_1to2"
+        android:layout_alignParentEnd="true" />
+
     <TextView android:text="Eze2chooz" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAlignment="gravity"
         android:textColor="@android:color/white"
         android:textSize="@dimen/abc_text_size_display_3_material"
+        android:id="@+id/textView"
+        android:layout_marginTop="50dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp" />
-
-    <RatingBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ratingBar"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentEnd="false"
-        android:focusableInTouchMode="true"
-        android:backgroundTint="@android:color/transparent"
-        android:numStars="5"
-        android:stepSize="1" />
+        android:layout_alignEnd="@+id/button_1to2" />
 
     <Button
         android:layout_width="@android:dimen/thumbnail_width"
@@ -34,9 +37,19 @@
         android:text="@string/Start_button"
         android:textSize="@android:dimen/app_icon_size"
         android:id="@+id/button_1to2"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="70dp"
         android:background="@android:color/white"
-        android:textColor="@android:color/holo_blue_dark" />
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_marginBottom="71dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageView"
+        android:src="@drawable/eze2chooz_logo"
+        android:layout_above="@+id/textView2"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_marginEnd="81dp" />
+
 </RelativeLayout>
