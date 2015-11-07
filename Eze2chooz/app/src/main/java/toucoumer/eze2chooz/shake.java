@@ -56,17 +56,6 @@ public class shake extends AppCompatActivity implements SensorEventListener {
             DisplayChoice4.setText(intent.getStringExtra(EXTRA_CHOICE4));
             DisplayChoice5.setText(intent.getStringExtra(EXTRA_CHOICE5));
         }
-
-
-        final ImageButton ButtonGoHome = (ImageButton) findViewById(R.id.imageButtonHome);
-        ButtonGoHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(shake.this, home.class);
-                startActivity(intent);
-            }
-        });
-
     }
 
     @Override
