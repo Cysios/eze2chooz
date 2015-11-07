@@ -3,7 +3,10 @@ package toucoumer.eze2chooz;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -41,9 +44,18 @@ public class choices extends AppCompatActivity {
 
                 // Check that the two first editText are fill
                 if (choice1.getText().toString().equals("") || choice2.getText().toString().equals("")) {
-                    Toast.makeText(choices.this,
-                            R.string.Error_nb_choices,
-                            Toast.LENGTH_SHORT).show();
+                    LayoutInflater inflater = getLayoutInflater();
+                    View layout = inflater.inflate(R.layout.activity_custom__toast,
+                            (ViewGroup) findViewById(R.id.toast_layout_root));
+
+                    TextView text = (TextView) layout.findViewById(R.id.text);
+                    text.setText(R.string.Error_nb_choices);
+
+                    Toast toast = new Toast(getApplicationContext());
+                    toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+                    toast.setDuration(Toast.LENGTH_LONG);
+                    toast.setView(layout);
+                    toast.show();
                     return;
                 }
 
