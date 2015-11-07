@@ -6,13 +6,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
 
 public class result extends AppCompatActivity {
+
+    final String EXTRA_RESULT = "result";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+        Intent intent = getIntent();
+        TextView DisplayChoice1 = (TextView) findViewById(R.id.textView_Res);
+        DisplayChoice1.setText(intent.getStringExtra(EXTRA_RESULT));
 
         final ImageButton ButtonGoHome = (ImageButton) findViewById(R.id.imageButtonHome);
         ButtonGoHome.setOnClickListener(new View.OnClickListener() {

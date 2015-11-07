@@ -21,6 +21,7 @@ public class shake extends AppCompatActivity implements SensorEventListener {
     final String EXTRA_CHOICE3 = "user_choice3";
     final String EXTRA_CHOICE4 = "user_choice4";
     final String EXTRA_CHOICE5 = "user_choice5";
+    final String EXTRA_RESULT = "result";
 
     //Sensor variables
     private SensorManager mSensorManager;
@@ -56,14 +57,6 @@ public class shake extends AppCompatActivity implements SensorEventListener {
             DisplayChoice5.setText(intent.getStringExtra(EXTRA_CHOICE5));
         }
 
-        final ImageButton ButtonGoToNext = (ImageButton) findViewById(R.id.imageButtonNext);
-        ButtonGoToNext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(shake.this, result.class);
-                startActivity(intent);
-            }
-        });
 
         final ImageButton ButtonGoHome = (ImageButton) findViewById(R.id.imageButtonHome);
         ButtonGoHome.setOnClickListener(new View.OnClickListener() {
@@ -98,6 +91,7 @@ public class shake extends AppCompatActivity implements SensorEventListener {
                 if (speed > SHAKE_THRESHOLD) {
 
                     Intent intent = new Intent(shake.this, result.class);
+                    intent.putExtra(EXTRA_RESULT, "coucou");
                     startActivity(intent);
 
 

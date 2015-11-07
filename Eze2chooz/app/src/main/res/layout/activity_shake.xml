@@ -28,14 +28,6 @@
         android:minHeight="64dp"
         android:minWidth="64dp" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageButtonNext"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:background="@drawable/play45" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
