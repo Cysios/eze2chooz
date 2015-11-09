@@ -1,12 +1,32 @@
-/app/build
-/gradle
-/.idea
-/.gradle
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
+# Ant
+MANIFEST.MF
+./*.jar
+build.num
+build
+
+# ADT
+.classpath
+.project
+.settings
+local.properties
+bin
+gen
+_layouts
+proguard.cfg
+
+# OSX
 .DS_Store
-/build
-/captures
-/app/build.gradle
+
+# Github
+gh-pages
+
+# Gradle
+.gradle
+build
+
+# IDEA
+*.iml
+*.ipr
+*.iws
+out
+.idea

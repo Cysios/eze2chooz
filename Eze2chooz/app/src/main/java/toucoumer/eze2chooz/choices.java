@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,43 @@ public class choices extends AppCompatActivity {
         final EditText choice3 = (EditText) findViewById(R.id.editTextChoice3);
         final EditText choice4 = (EditText) findViewById(R.id.editTextChoice4);
         final EditText choice5 = (EditText) findViewById(R.id.editTextChoice5);
+
+        choice2.setVisibility(View.INVISIBLE);
+        choice3.setVisibility(View.INVISIBLE);
+        choice4.setVisibility(View.INVISIBLE);
+        choice5.setVisibility(View.INVISIBLE);
+
+        choice1.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                choice2.setVisibility(View.VISIBLE);
+                return false;
+            }
+        });
+
+        choice2.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                choice3.setVisibility(View.VISIBLE);
+                return false;
+            }
+        });
+
+        choice3.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                choice4.setVisibility(View.VISIBLE);
+                return false;
+            }
+        });
+
+        choice4.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                choice5.setVisibility(View.VISIBLE);
+                return false;
+            }
+        });
 
         final ImageButton ButtonGoNext = (ImageButton) findViewById(R.id.imageButtonNext);
         ButtonGoNext.setOnClickListener(new View.OnClickListener() {
