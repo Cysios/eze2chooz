@@ -13,6 +13,8 @@ import android.widget.TextView;
 import android.hardware.SensorManager;
 import android.hardware.Sensor;
 
+import java.util.Random;
+
 
 public class shake extends AppCompatActivity implements SensorEventListener {
 
@@ -22,6 +24,7 @@ public class shake extends AppCompatActivity implements SensorEventListener {
     final String EXTRA_CHOICE4 = "user_choice4";
     final String EXTRA_CHOICE5 = "user_choice5";
     final String EXTRA_RESULT = "result";
+    final int nbChoice=0;
 
     //Sensor variables
     private SensorManager mSensorManager;
@@ -55,6 +58,8 @@ public class shake extends AppCompatActivity implements SensorEventListener {
             DisplayChoice3.setText(intent.getStringExtra(EXTRA_CHOICE3));
             DisplayChoice4.setText(intent.getStringExtra(EXTRA_CHOICE4));
             DisplayChoice5.setText(intent.getStringExtra(EXTRA_CHOICE5));
+
+
         }
 
 
@@ -91,7 +96,7 @@ public class shake extends AppCompatActivity implements SensorEventListener {
                 if (speed > SHAKE_THRESHOLD) {
 
                     Intent intent = new Intent(shake.this, result.class);
-                    intent.putExtra(EXTRA_RESULT, "coucou");
+                    intent.putExtra(EXTRA_RESULT, getResult());
                     startActivity(intent);
 
 
@@ -103,6 +108,28 @@ public class shake extends AppCompatActivity implements SensorEventListener {
             }
         }
 
+    }
+
+    public String getResult(){
+        Random r= new Random();
+        int i = r.nextInt()%5;
+
+        switch (i) {
+            case 0:
+                return EXTRA_CHOICE1;
+            case 1:
+                return EXTRA_CHOICE2;
+            case 2:
+                return EXTRA_CHOICE3;
+            case 3:
+                return EXTRA_CHOICE4;
+            case 4:
+                return EXTRA_CHOICE5;
+            default:
+                break;
+        }
+
+        return null;
     }
 
     @Override
