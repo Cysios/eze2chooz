@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class result extends AppCompatActivity {
 
-    final String EXTRA_RESULT = "result";
+    private final static String EXTRA_RESULT = "result";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

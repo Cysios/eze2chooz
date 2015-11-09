@@ -15,11 +15,13 @@ import android.widget.Toast;
 
 public class choices extends AppCompatActivity {
 
-    final String EXTRA_CHOICE1 = "user_choice1";
-    final String EXTRA_CHOICE2 = "user_choice2";
-    final String EXTRA_CHOICE3 = "user_choice3";
-    final String EXTRA_CHOICE4 = "user_choice4";
-    final String EXTRA_CHOICE5 = "user_choice5";
+    private final static String EXTRA_CHOICE1 = "user_choice1";
+    private final static String EXTRA_CHOICE2 = "user_choice2";
+    private final static String EXTRA_CHOICE3 = "user_choice3";
+    private final static String EXTRA_CHOICE4 = "user_choice4";
+    private final static String EXTRA_CHOICE5 = "user_choice5";
+    private final static String EXTRA_NBCHOICES = "user_nbChoices";
+    private int nbChoices = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class choices extends AppCompatActivity {
         final EditText choice4 = (EditText) findViewById(R.id.editTextChoice4);
         final EditText choice5 = (EditText) findViewById(R.id.editTextChoice5);
 
+        // Hide EditText if EditText below isn't fill
         choice2.setVisibility(View.INVISIBLE);
         choice3.setVisibility(View.INVISIBLE);
         choice4.setVisibility(View.INVISIBLE);
@@ -40,32 +43,51 @@ public class choices extends AppCompatActivity {
         choice1.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                choice2.setVisibility(View.VISIBLE);
-                return false;
+                if (!choice1.getText().toString().equals("")) {
+                    nbChoices++;
+                    choice2.setVisibility(View.VISIBLE);
+                    return false;
+                } else {
+                    return true;
+                }
             }
         });
-
         choice2.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                choice3.setVisibility(View.VISIBLE);
-                return false;
+                if (!choice2.getText().toString().equals("")) {
+                    nbChoices++;
+                    choice3.setVisibility(View.VISIBLE);
+                    return false;
+                } else {
+                    return true;
+                }
             }
         });
-
         choice3.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                choice4.setVisibility(View.VISIBLE);
-                return false;
+                if ( !choice3.getText().toString().equals("") ) {
+                    nbChoices++;
+                    choice4.setVisibility(View.VISIBLE);
+                    return false;
+                }
+                else {
+                    return true;
+                }
             }
         });
-
         choice4.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                choice5.setVisibility(View.VISIBLE);
-                return false;
+                if ( !choice4.getText().toString().equals("") ) {
+                    nbChoices++;
+                    choice5.setVisibility(View.VISIBLE);
+                    return false;
+                }
+                else {
+                    return true;
+                }
             }
         });
 
@@ -79,6 +101,7 @@ public class choices extends AppCompatActivity {
                 intent.putExtra(EXTRA_CHOICE3, choice3.getText().toString());
                 intent.putExtra(EXTRA_CHOICE4, choice4.getText().toString());
                 intent.putExtra(EXTRA_CHOICE5, choice5.getText().toString());
+                intent.putExtra(EXTRA_NBCHOICES, nbChoices);
 
                 // Check that the two first editText are fill
                 if (choice1.getText().toString().equals("") || choice2.getText().toString().equals("")) {
@@ -96,7 +119,6 @@ public class choices extends AppCompatActivity {
                     toast.show();
                     return;
                 }
-
                 startActivity(intent);
             }
         });

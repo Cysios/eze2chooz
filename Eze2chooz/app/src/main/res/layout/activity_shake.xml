@@ -15,8 +15,8 @@
         android:text="@string/ez_it"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:textSize="85dp" />
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="85sp" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -36,7 +36,8 @@
         android:layout_marginTop="10dp"
         android:layout_below="@+id/textViewDisplayChoice"
         android:layout_centerHorizontal="true"
-        android:textSize="20dp" />
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -45,7 +46,8 @@
         android:id="@+id/textViewChoice2"
         android:layout_below="@+id/textViewChoice1"
         android:layout_centerHorizontal="true"
-        android:textSize="20dp" />
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -54,7 +56,8 @@
         android:id="@+id/textViewChoice3"
         android:layout_below="@+id/textViewChoice2"
         android:layout_centerHorizontal="true"
-        android:textSize="20dp" />
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -63,7 +66,8 @@
         android:id="@+id/textViewChoice4"
         android:layout_below="@+id/textViewChoice3"
         android:layout_centerHorizontal="true"
-        android:textSize="20dp" />
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -72,7 +76,8 @@
         android:id="@+id/textViewChoice5"
         android:layout_below="@+id/textViewChoice4"
         android:layout_centerHorizontal="true"
-        android:textSize="20dp" />
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -82,6 +87,7 @@
         android:layout_below="@+id/ezIt"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:textSize="20dp" />
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
 
 </RelativeLayout>

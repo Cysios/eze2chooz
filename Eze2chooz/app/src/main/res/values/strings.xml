@@ -7,6 +7,10 @@
     <string name="choice5">Choice n°5</string>
     <string name="ez_it">EZ IT</string>
     <string name="Start_button">Start</string>
+    <string name="Need">YOU NEED : </string>
     <string name="Error_nb_choices">Error: You must enter at least 2 choices</string>
     <string name="DisplayShake">You cannot decide between the following choices : </string>
+    <string name="DisplayResume">Help you find your way between choices</string>
+    <string name="UseFlatIcon">Icon made by Freepik from www.flaticon.com</string>
+
 </resources>

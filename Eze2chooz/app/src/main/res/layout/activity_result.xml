@@ -10,20 +10,23 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="YOU NEED :"
         android:id="@+id/textView_Need"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Need"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="85sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Display result"
         android:id="@+id/textView_Res"
-        android:layout_marginTop="74dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Test"
+        android:textSize="70sp"
         android:layout_below="@+id/textView_Need"
+        android:textColor="@android:color/black"
         android:layout_centerHorizontal="true" />
 
     <ImageButton
@@ -43,5 +46,13 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:background="@drawable/github" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/UseFlatIcon"
+        android:id="@+id/textViewFlatIcon"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
