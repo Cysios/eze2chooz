@@ -26,6 +26,8 @@ public class shake extends AppCompatActivity implements SensorEventListener {
     private long lastUpdate = 0;
     private static int nbChoices = 0;
 
+    private SensorManager mSensorManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +35,7 @@ public class shake extends AppCompatActivity implements SensorEventListener {
         setContentView(R.layout.activity_shake);
 
         //accelerometer function
-        SensorManager mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         Sensor mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mSensorManager.registerListener(this, mSensor, SensorManager.SENSOR_DELAY_UI);
 
@@ -97,6 +99,12 @@ public class shake extends AppCompatActivity implements SensorEventListener {
 
    @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {}
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mSensorManager.unregisterListener(this);
+    }
 
     public String getResult() {
         String result = null;
