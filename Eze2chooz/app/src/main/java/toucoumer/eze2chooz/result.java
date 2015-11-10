@@ -21,6 +21,7 @@ public class result extends AppCompatActivity {
         TextView DisplayChoice1 = (TextView) findViewById(R.id.textView_Res);
         DisplayChoice1.setText(intent.getStringExtra(EXTRA_RESULT));
 
+        //Button to come back app' home
         final ImageButton ButtonGoHome = (ImageButton) findViewById(R.id.imageButtonHome);
         ButtonGoHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,7 +30,7 @@ public class result extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        //Button to go to the repository on github.
         final ImageButton ButtonGoGit = (ImageButton) findViewById(R.id.imageButtonGit);
         ButtonGoGit.setOnClickListener(new View.OnClickListener() {
             @Override

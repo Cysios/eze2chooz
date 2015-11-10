@@ -1,3 +1,8 @@
+/* Code for Activity shake
+shake is the activity where the user shake his device to activate the random selection of the choice.
+The random selection is based on the accelerometer sensor.
+*/
+
 package toucoumer.eze2chooz;
 
 import android.content.Context;
@@ -7,26 +12,40 @@ import android.hardware.SensorEventListener;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+
 // import for accelerometer
 import android.hardware.SensorManager;
 import android.hardware.Sensor;
 
 public class shake extends AppCompatActivity implements SensorEventListener {
 
+    // Variables are used to recover the users choices from the previous activity (choices)
     private final static String EXTRA_CHOICE1 = "user_choice1";
     private final static String EXTRA_CHOICE2 = "user_choice2";
     private final static String EXTRA_CHOICE3 = "user_choice3";
     private final static String EXTRA_CHOICE4 = "user_choice4";
     private final static String EXTRA_CHOICE5 = "user_choice5";
+
+    //Variable is used to know how many choices are filled by the user from the previous activity
     private final static String EXTRA_NBCHOICES = "user_nbChoices";
+
+    // Variable are used to send the result of the random selection
     private final static String EXTRA_RESULT = "result";
-    private static final float SHAKE_THRESHOLD = 100;// sensitivity factor of the shaker
+
+    // SHAKE_THRESHOLD is the sensitivity factor of the shaker to activate function getResult()
+    private static final float SHAKE_THRESHOLD = 100;
+
+    // Variables for display
     private String Choice1, Choice2, Choice3, Choice4, Choice5;
+
+    //Variables for sensor Detection
     private float last_x, last_y, last_z;
     private long lastUpdate = 0;
+    private SensorManager mSensorManager;
+    //Variables for getResult() function
     private static int nbChoices = 0;
 
-    private SensorManager mSensorManager;
+
 
 
     @Override
@@ -64,6 +83,7 @@ public class shake extends AppCompatActivity implements SensorEventListener {
         }
     }
 
+    //Override to calculate the speed of the shock
     @Override
     public void onSensorChanged(SensorEvent event) {
         Sensor mySensor = event.sensor;
@@ -85,8 +105,8 @@ public class shake extends AppCompatActivity implements SensorEventListener {
 
                 if (speed > SHAKE_THRESHOLD) {
                     Intent intent = new Intent(shake.this, result.class);
+                    //put the return of the function getResult() in the EXTRA_RESULT
                     intent.putExtra(EXTRA_RESULT, getResult());
-                    // intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     return;
                 }
@@ -100,12 +120,15 @@ public class shake extends AppCompatActivity implements SensorEventListener {
    @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {}
 
+    //Unactivate the sensor when the activity is on Pause
     @Override
     protected void onPause() {
         super.onPause();
         mSensorManager.unregisterListener(this);
     }
 
+    //This function do the random selection with nbChoices variables and the choices of the user.
+    //She returns the result of the random selection
     public String getResult() {
         String result = null;
         int lower = 0;

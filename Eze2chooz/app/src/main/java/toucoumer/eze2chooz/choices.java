@@ -1,3 +1,8 @@
+/* Code for Activity Choices
+Choices is the the activity where all information (choices) of the user is recorded.
+it's a form which accept 2-5 users' choices
+*/
+
 package toucoumer.eze2chooz;
 
 import android.content.Intent;
@@ -15,12 +20,16 @@ import android.widget.Toast;
 
 public class choices extends AppCompatActivity {
 
+
+    // Variables are used to send the users choices to the next activity
     private final static String EXTRA_CHOICE1 = "user_choice1";
     private final static String EXTRA_CHOICE2 = "user_choice2";
     private final static String EXTRA_CHOICE3 = "user_choice3";
     private final static String EXTRA_CHOICE4 = "user_choice4";
     private final static String EXTRA_CHOICE5 = "user_choice5";
     private final static String EXTRA_NBCHOICES = "user_nbChoices";
+
+    //Variable is used to know how many choices are filled by the user and to send it to the next activity
     private int nbChoices = 0;
 
     @Override
@@ -40,6 +49,8 @@ public class choices extends AppCompatActivity {
         choice4.setVisibility(View.INVISIBLE);
         choice5.setVisibility(View.INVISIBLE);
 
+
+        // Check if the edit Text is filled by the user
         choice1.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
@@ -52,6 +63,7 @@ public class choices extends AppCompatActivity {
                 }
             }
         });
+
         choice2.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
@@ -104,8 +116,10 @@ public class choices extends AppCompatActivity {
                 intent.putExtra(EXTRA_NBCHOICES, nbChoices);
 
                 // Check that the two first editText are fill
+                //There is an error displayed when the check is TRUE
                 if (choice1.getText().toString().equals("") || choice2.getText().toString().equals("")) {
                     LayoutInflater inflater = getLayoutInflater();
+                    //Load the error activity_UML
                     View layout = inflater.inflate(R.layout.activity_custom__toast,
                             (ViewGroup) findViewById(R.id.toast_layout_root));
 
@@ -123,6 +137,8 @@ public class choices extends AppCompatActivity {
             }
         });
 
+
+        //Button to come back app' home
         final ImageButton ButtonGoHome = (ImageButton) findViewById(R.id.imageButtonHome);
         ButtonGoHome.setOnClickListener(new View.OnClickListener() {
             @Override
