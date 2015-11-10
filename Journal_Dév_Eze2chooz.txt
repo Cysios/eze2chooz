@@ -9,4 +9,4 @@ Le 7/11/15
 - Bouton home page
 - Validation des choix + Apparition du choix suivant
 - shake it function
-- Passage d’argument entre différentes activités
+- Passage d’argument entre différentes activitésLe 10/11/15-Fix some problems:	-multiple activities after shock	-number of choices is take in account	-Optimization of the code-Comment of the code-Begin the final presentation of the project
