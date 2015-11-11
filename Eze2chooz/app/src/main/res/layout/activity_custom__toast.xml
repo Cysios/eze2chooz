@@ -7,7 +7,7 @@
     android:padding="8dp"
     android:background="@android:color/holo_blue_dark">
 
-    <ImageView android:src="@drawable/skull16"
+    <ImageView android:src="@drawable/skull16white"
         android:layout_width="@android:dimen/notification_large_icon_width"
         android:layout_height="@android:dimen/notification_large_icon_height"
         android:layout_marginRight="8dp" />

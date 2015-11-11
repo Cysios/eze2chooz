@@ -15,13 +15,8 @@ import android.widget.Toast;
 
 public class choices extends AppCompatActivity {
 
-    private final static String EXTRA_CHOICE1 = "user_choice1";
-    private final static String EXTRA_CHOICE2 = "user_choice2";
-    private final static String EXTRA_CHOICE3 = "user_choice3";
-    private final static String EXTRA_CHOICE4 = "user_choice4";
-    private final static String EXTRA_CHOICE5 = "user_choice5";
-    private final static String EXTRA_NBCHOICES = "user_nbChoices";
-    private int nbChoices = 0;
+    private final static String EXTRA_CHOICES = "user_choices";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +39,6 @@ public class choices extends AppCompatActivity {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (!choice1.getText().toString().equals("")) {
-                    nbChoices++;
                     choice2.setVisibility(View.VISIBLE);
                     return false;
                 } else {
@@ -56,7 +50,6 @@ public class choices extends AppCompatActivity {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (!choice2.getText().toString().equals("")) {
-                    nbChoices++;
                     choice3.setVisibility(View.VISIBLE);
                     return false;
                 } else {
@@ -68,7 +61,6 @@ public class choices extends AppCompatActivity {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if ( !choice3.getText().toString().equals("") ) {
-                    nbChoices++;
                     choice4.setVisibility(View.VISIBLE);
                     return false;
                 }
@@ -81,7 +73,6 @@ public class choices extends AppCompatActivity {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if ( !choice4.getText().toString().equals("") ) {
-                    nbChoices++;
                     choice5.setVisibility(View.VISIBLE);
                     return false;
                 }
@@ -95,13 +86,15 @@ public class choices extends AppCompatActivity {
         ButtonGoNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String[] Choices = {
+                        choice1.getText().toString(),
+                        choice2.getText().toString(),
+                        choice3.getText().toString(),
+                        choice4.getText().toString(),
+                        choice5.getText().toString()
+                };
                 Intent intent = new Intent(choices.this, shake.class);
-                intent.putExtra(EXTRA_CHOICE1, choice1.getText().toString());
-                intent.putExtra(EXTRA_CHOICE2, choice2.getText().toString());
-                intent.putExtra(EXTRA_CHOICE3, choice3.getText().toString());
-                intent.putExtra(EXTRA_CHOICE4, choice4.getText().toString());
-                intent.putExtra(EXTRA_CHOICE5, choice5.getText().toString());
-                intent.putExtra(EXTRA_NBCHOICES, nbChoices);
+                intent.putExtra(EXTRA_CHOICES, Choices);
 
                 // Check that the two first editText are fill
                 if (choice1.getText().toString().equals("") || choice2.getText().toString().equals("")) {

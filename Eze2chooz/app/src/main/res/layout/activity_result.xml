@@ -25,6 +25,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Test"
         android:textSize="70sp"
+        android:layout_marginTop="25dp"
         android:layout_below="@+id/textView_Need"
         android:textColor="@android:color/black"
         android:layout_centerHorizontal="true" />
@@ -56,3 +57,4 @@
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
+

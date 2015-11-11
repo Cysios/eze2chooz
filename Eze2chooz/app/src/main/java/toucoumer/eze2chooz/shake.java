@@ -13,21 +13,14 @@ import android.hardware.Sensor;
 
 public class shake extends AppCompatActivity implements SensorEventListener {
 
-    private final static String EXTRA_CHOICE1 = "user_choice1";
-    private final static String EXTRA_CHOICE2 = "user_choice2";
-    private final static String EXTRA_CHOICE3 = "user_choice3";
-    private final static String EXTRA_CHOICE4 = "user_choice4";
-    private final static String EXTRA_CHOICE5 = "user_choice5";
-    private final static String EXTRA_NBCHOICES = "user_nbChoices";
+    private final static String EXTRA_CHOICES =  "user_choices";
     private final static String EXTRA_RESULT = "result";
     private static final float SHAKE_THRESHOLD = 100;// sensitivity factor of the shaker
-    private String Choice1, Choice2, Choice3, Choice4, Choice5;
+    private String[] Choices;
+    private int nbChoices = 0;
     private float last_x, last_y, last_z;
     private long lastUpdate = 0;
-    private static int nbChoices = 0;
-
     private SensorManager mSensorManager;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,18 +42,18 @@ public class shake extends AppCompatActivity implements SensorEventListener {
             TextView DisplayChoice4 = (TextView) findViewById(R.id.textViewChoice4);
             TextView DisplayChoice5 = (TextView) findViewById(R.id.textViewChoice5);
             // Get intent values
-            Choice1 = intent.getStringExtra(EXTRA_CHOICE1);
-            Choice2 = intent.getStringExtra(EXTRA_CHOICE2);
-            Choice3 = intent.getStringExtra(EXTRA_CHOICE3);
-            Choice4 = intent.getStringExtra(EXTRA_CHOICE4);
-            Choice5 = intent.getStringExtra(EXTRA_CHOICE5);
-            nbChoices = intent.getIntExtra(EXTRA_NBCHOICES, 0);
+            Choices = intent.getStringArrayExtra(EXTRA_CHOICES);
+            for (int i = 0; i < Choices.length; i++) {
+                if (!Choices[i].equals(""))
+                    nbChoices++;
+            }
+
             // Display values
-            DisplayChoice1.setText(Choice1);
-            DisplayChoice2.setText(Choice2);
-            DisplayChoice3.setText(Choice3);
-            DisplayChoice4.setText(Choice4);
-            DisplayChoice5.setText(Choice5);
+            DisplayChoice1.setText(Choices[0]);
+            DisplayChoice2.setText(Choices[1]);
+            DisplayChoice3.setText(Choices[2]);
+            DisplayChoice4.setText(Choices[3]);
+            DisplayChoice5.setText(Choices[4]);
         }
     }
 
@@ -86,7 +79,6 @@ public class shake extends AppCompatActivity implements SensorEventListener {
                 if (speed > SHAKE_THRESHOLD) {
                     Intent intent = new Intent(shake.this, result.class);
                     intent.putExtra(EXTRA_RESULT, getResult());
-                    // intent.setFlags(intent.getFlags() | Intent.FLAG_ACTIVITY_NO_HISTORY);
                     startActivity(intent);
                     return;
                 }
@@ -113,19 +105,19 @@ public class shake extends AppCompatActivity implements SensorEventListener {
         int random = (int)(Math.random() * (higher-lower)) + lower;
         switch (random) {
             case 0:
-                result = Choice1;
+                result = Choices[0];
                 break;
             case 1:
-                result = Choice2;
+                result = Choices[1];
                 break;
             case 2:
-                result = Choice3;
+                result = Choices[2];
                 break;
             case 3:
-                result = Choice4;
+                result = Choices[3];
                 break;
             case 4:
-                result = Choice5;
+                result = Choices[4];
                 break;
             default:
                 break;

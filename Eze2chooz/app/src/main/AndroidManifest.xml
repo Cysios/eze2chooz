@@ -19,7 +19,7 @@
         </activity>
         <activity android:name=".shake" android:noHistory="true" >
         </activity>
-        <activity android:name=".result" android:noHistory="true" >
+        <activity android:name=".result" >
         </activity>
     </application>
 
