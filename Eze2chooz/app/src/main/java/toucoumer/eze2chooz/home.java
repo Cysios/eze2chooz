@@ -1,3 +1,9 @@
+/* Code for Activity Home
+Home is the first screen of the application
+it is a welcome screen where the user can start his activity
+There is only one possibility for the user "Start"
+*/
+
 package toucoumer.eze2chooz;
 
 import android.content.Intent;
@@ -13,6 +19,7 @@ public class home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        //Button to go to next activity
         final Button ButtonGoToNext = (Button) findViewById(R.id.button_1to2);
         ButtonGoToNext.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -13,9 +13,9 @@ import android.hardware.Sensor;
 
 public class shake extends AppCompatActivity implements SensorEventListener {
 
-    private final static String EXTRA_CHOICES =  "user_choices";
+    private final static String EXTRA_CHOICES = "user_choices";
     private final static String EXTRA_RESULT = "result";
-    private static final float SHAKE_THRESHOLD = 100;// sensitivity factor of the shaker
+    private static final float SHAKE_THRESHOLD = 100; // sensitivity factor of the shaker
     private String[] Choices;
     private int nbChoices = 0;
     private float last_x, last_y, last_z;
@@ -89,8 +89,9 @@ public class shake extends AppCompatActivity implements SensorEventListener {
         }
     }
 
-   @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {}
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+    }
 
     @Override
     protected void onPause() {
@@ -102,7 +103,7 @@ public class shake extends AppCompatActivity implements SensorEventListener {
         String result = null;
         int lower = 0;
         int higher = nbChoices;
-        int random = (int)(Math.random() * (higher-lower)) + lower;
+        int random = (int) (Math.random() * (higher - lower)) + lower;
         switch (random) {
             case 0:
                 result = Choices[0];
@@ -122,7 +123,7 @@ public class shake extends AppCompatActivity implements SensorEventListener {
             default:
                 break;
         }
-    return result;
+        return result;
     }
 
 }

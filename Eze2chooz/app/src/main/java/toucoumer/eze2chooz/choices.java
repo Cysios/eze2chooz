@@ -60,11 +60,10 @@ public class choices extends AppCompatActivity {
         choice3.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if ( !choice3.getText().toString().equals("") ) {
+                if (!choice3.getText().toString().equals("")) {
                     choice4.setVisibility(View.VISIBLE);
                     return false;
-                }
-                else {
+                } else {
                     return true;
                 }
             }
@@ -72,11 +71,10 @@ public class choices extends AppCompatActivity {
         choice4.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if ( !choice4.getText().toString().equals("") ) {
+                if (!choice4.getText().toString().equals("")) {
                     choice5.setVisibility(View.VISIBLE);
                     return false;
-                }
-                else {
+                } else {
                     return true;
                 }
             }
