@@ -16,7 +16,7 @@ import android.widget.Toast;
 public class choices extends AppCompatActivity {
 
     private final static String EXTRA_CHOICES = "user_choices";
-
+    boolean isUnique = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +28,6 @@ public class choices extends AppCompatActivity {
         final EditText choice3 = (EditText) findViewById(R.id.editTextChoice3);
         final EditText choice4 = (EditText) findViewById(R.id.editTextChoice4);
         final EditText choice5 = (EditText) findViewById(R.id.editTextChoice5);
-
-        // Hide EditText if EditText below isn't fill
-        choice2.setVisibility(View.INVISIBLE);
-        choice3.setVisibility(View.INVISIBLE);
-        choice4.setVisibility(View.INVISIBLE);
-        choice5.setVisibility(View.INVISIBLE);
 
         choice1.setOnKeyListener(new View.OnKeyListener() {
             @Override
@@ -91,26 +85,35 @@ public class choices extends AppCompatActivity {
                         choice4.getText().toString(),
                         choice5.getText().toString()
                 };
-                Intent intent = new Intent(choices.this, shake.class);
-                intent.putExtra(EXTRA_CHOICES, Choices);
 
                 // Check that the two first editText are fill
                 if (choice1.getText().toString().equals("") || choice2.getText().toString().equals("")) {
-                    LayoutInflater inflater = getLayoutInflater();
-                    View layout = inflater.inflate(R.layout.activity_custom__toast,
-                            (ViewGroup) findViewById(R.id.toast_layout_root));
-
-                    TextView text = (TextView) layout.findViewById(R.id.text);
-                    text.setText(R.string.Error_nb_choices);
-
-                    Toast toast = new Toast(getApplicationContext());
-                    toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
-                    toast.setDuration(Toast.LENGTH_LONG);
-                    toast.setView(layout);
-                    toast.show();
+                    displayToast(R.string.Error_nb_choices);
                     return;
                 }
-                startActivity(intent);
+
+                // Check that Choices[i] is unique
+                for (int i = 0; i < Choices.length; i++) {
+                    if (!Choices[i].equals("")) {
+                        if (Choices[i].toLowerCase().equals(Choices[(i + 1) % Choices.length].toLowerCase()) ||
+                                Choices[i].toLowerCase().equals(Choices[(i + 2) % Choices.length].toLowerCase()) ||
+                                Choices[i].toLowerCase().equals(Choices[(i + 3) % Choices.length].toLowerCase()) ||
+                                Choices[i].toLowerCase().equals(Choices[(i + 4) % Choices.length].toLowerCase())) {
+                            isUnique = false;
+                            displayToast(R.string.Error_equal);
+                            return;
+                        } else {
+                            isUnique = true;
+                        }
+                    }
+                }
+
+                if (isUnique) {
+                    Intent intent = new Intent(choices.this, shake.class);
+                    intent.putExtra(EXTRA_CHOICES, Choices);
+                    startActivity(intent);
+                }
+
             }
         });
 
@@ -122,6 +125,21 @@ public class choices extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
 
+    private void displayToast(int errorString) {
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.activity_custom__toast,
+                (ViewGroup) findViewById(R.id.toast_layout_root));
+
+        TextView text = (TextView) layout.findViewById(R.id.text);
+        text.setText(errorString);
+
+        Toast toast = new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(layout);
+        toast.show();
     }
 }
+

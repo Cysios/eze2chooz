@@ -8,6 +8,7 @@
     <string name="ez_it">EZE IT</string>
     <string name="Start_button">Start</string>
     <string name="Need">YOU NEED</string>
+    <string name="Error_equal">You can not have 2 times the same choice</string>
     <string name="Error_nb_choices">Error: You must enter at least 2 choices</string>
     <string name="DisplayShake">You cannot decide between the following choices : </string>
     <string name="DisplayResume">Help you find your way between choices</string>

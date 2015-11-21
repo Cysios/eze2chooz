@@ -31,6 +31,17 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/DisplayShake"
+        android:id="@+id/textViewDisplayChoice"
+        android:layout_below="@+id/ezIt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/textViewChoice1"
         android:layout_marginTop="10dp"
@@ -76,17 +87,6 @@
         android:id="@+id/textViewChoice5"
         android:layout_below="@+id/textViewChoice4"
         android:layout_centerHorizontal="true"
-        android:textColor="@android:color/black"
-        android:textSize="20sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/DisplayShake"
-        android:id="@+id/textViewDisplayChoice"
-        android:layout_below="@+id/ezIt"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
         android:textColor="@android:color/black"
         android:textSize="20sp" />
 
