@@ -1,12 +1,12 @@
-Journal Dév Eze2chooz:Le 3/11/15Vérification et validation du cahier des chargesDécouvrte du plagia !!!!! LACHAUD MADHIAInstallation de GitHub & clonage avec le répertoire communRépartition des tâches ( Fab & Max : design, Elie & Max : dev dur , Fab : Etude marketing)1er test : 1ere vue lancéePassage vue 1 vue 2 Champ Ok vue 1 et vue 2Difficultés : Problème de synchronisation : passage pour le Mac sur Source TREE par FRED pour remédier au problème de fichier config qui se synchro.Apprentissage de Git (ou réapprentissage...)
+Journal Dév Eze2chooz:Le 3/11/15Vérification et validation du cahier des chargesDécouvrte du plagia !!!!! LACHAUD MADHIAInstallation de GitHub & clonage avec le rÈpertoire communRÈpartition des t‚ches ( Fab & Max : design, Elie & Max: dev dur , Fab: Etude marketing)1er test 1ere vue lancÈePassage vue 1 vue 2 Champ Ok vue 1 et vue 2DifficultÈs: ProblèËme de synchronisation: passage pour le Mac sur Source TREE par FRED pour remÈdier au problËème de fichier config qui se synchro.Apprentissage de Git (ou rÈapprentissage...)
 
 
 Le 7/11/15
 
 - Edit home page
 - Add logo Ese2chooz
-- Garde fou en cas de choix inférieur à 2
+- Garde fou en cas de choix infÈrieur à 2
 - Bouton home page
 - Validation des choix + Apparition du choix suivant
 - shake it function
-- Passage d’argument entre différentes activitésLe 10/11/15-Fix some problems:	-multiple activities after shock	-number of choices is take in account	-Optimization of the code-Comment of the code-Begin the final presentation of the project
+- Passage d'argument entre diffÈrentes activitÈsLe 10/11/15-Fix some problems:	-multiple activities after shock	-number of choices is take in account	-Optimization of the code-Comment of the code-Begin the final presentation of the project
