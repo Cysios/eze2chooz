@@ -47,7 +47,6 @@ public class shake extends AppCompatActivity implements SensorEventListener {
                 if (!Choices[i].equals(""))
                     nbChoices++;
             }
-
             // Display values
             DisplayChoice1.setText(Choices[0]);
             DisplayChoice2.setText(Choices[1]);

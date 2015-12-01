@@ -21,7 +21,8 @@
             android:layout_below="@+id/imageButtonHome"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"
-            android:inputType="text" />
+            android:inputType="text"
+            android:maxLength="50" />
 
         <EditText
             android:layout_width="fill_parent"
@@ -33,7 +34,8 @@
             android:layout_below="@+id/editTextChoice1"
             android:layout_marginTop="20dp"
             android:visibility="invisible"
-            android:inputType="text" />
+            android:inputType="text"
+            android:maxLength="50" />
 
         <EditText
             android:layout_width="fill_parent"
@@ -45,7 +47,8 @@
             android:layout_below="@+id/editTextChoice2"
             android:layout_marginTop="20dp"
             android:visibility="invisible"
-            android:inputType="text" />
+            android:inputType="text"
+            android:maxLength="50" />
 
         <EditText
             android:layout_width="fill_parent"
@@ -57,7 +60,8 @@
             android:layout_below="@+id/editTextChoice3"
             android:layout_marginTop="20dp"
             android:visibility="invisible"
-            android:inputType="text" />
+            android:inputType="text"
+            android:maxLength="50" />
 
         <EditText
             android:layout_width="fill_parent"
@@ -69,7 +73,8 @@
             android:layout_below="@+id/editTextChoice4"
             android:layout_marginTop="20dp"
             android:visibility="invisible"
-            android:inputType="text" />
+            android:inputType="text"
+            android:maxLength="50" />
 
 
         <ImageButton

@@ -48,6 +48,7 @@
         android:layout_below="@+id/textViewDisplayChoice"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/black"
+        android:textAlignment="center"
         android:textSize="20sp" />
 
     <TextView
@@ -58,6 +59,7 @@
         android:layout_below="@+id/textViewChoice1"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/black"
+        android:textAlignment="center"
         android:textSize="20sp" />
 
     <TextView
@@ -68,6 +70,7 @@
         android:layout_below="@+id/textViewChoice2"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/black"
+        android:textAlignment="center"
         android:textSize="20sp" />
 
     <TextView
@@ -78,6 +81,7 @@
         android:layout_below="@+id/textViewChoice3"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/black"
+        android:textAlignment="center"
         android:textSize="20sp" />
 
     <TextView
@@ -88,6 +92,7 @@
         android:layout_below="@+id/textViewChoice4"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/black"
+        android:textAlignment="center"
         android:textSize="20sp" />
 
 </RelativeLayout>

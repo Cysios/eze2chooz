@@ -28,6 +28,7 @@
         android:layout_marginTop="25dp"
         android:layout_below="@+id/textView_Need"
         android:textColor="@android:color/black"
+        android:textAlignment="center"
         android:layout_centerHorizontal="true" />
 
     <ImageButton
